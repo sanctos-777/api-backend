@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação da API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #007bff;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #666;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    code {
+      font-family: monospace;
+      background-color: #f5f5f5;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    .example {
+      margin-left: 20px;
+    }
+
+    .endpoint {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .endpoint-content {
+      margin-left: 20px;
+    }
+
+    .method {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Documentação da API</h1>
+    <p>Bem-vindo à documentação da API.</p>
+
+    <h2>Endpoints</h2>
+    <ul>
+      <li class="endpoint">
+        <h3>GET /servidores/listar</h3>
+        <div class="endpoint-content">
+          <p>Obter uma lista de todos os servidores.</p>
+          <div class="method">
+            <p>Método: <code>GET</code></p>
+            <p>Exemplo:</p>
+            <pre>/servidores/listar</pre>
+          </div>
+        </div>
+      </li>
+      <li class="endpoint">
+        <h3>GET /servidores/listarServidor/:id</h3>
+        <div class="endpoint-content">
+          <p>Obter servidor pelo ID.</p>
+          <div class="method">
+            <p>Método: <code>GET</code></p>
+            <p>Exemplo:</p>
+            <pre>/servidores/listarServidor/1</pre>
+          </div>
+        </div>
+      </li>
+      <li class="endpoint">
+        <h3>POST /servidores/inserir</h3>
+        <div class="endpoint-content">
+          <p>Criar um novo servidor.</p>
+          <div class="method">
+            <p>Método: <code>POST</code></p>
+            <p>Exemplo:</p>
+            <pre>/servidores/inserir</pre>
+            <p>Corpo da Requisição:</p>
+            <pre class="example">{
+  "nome": "João da Silva",
+  "cargo": "Engenheiro",
+  "departamento": "Engenharia"
+}</pre>
+          </div>
+        </div>
+      </li>
+      <li class="endpoint">
+        <h3>PUT /servidores/atualizar/:id</h3>
+        <div class="endpoint-content">
+          <p>Atualizar servidor existente.</p>
+          <div class="method">
+            <p>Método: <code>PUT</code></p>
+            <p>Exemplo:</p>
+            <pre>/servidores/atualizar/1</pre>
+            <p>Corpo da Requisição:</p>
+            <pre class="example">{
+  "nome": "João da Silva",
+  "cargo": "Engenheiro",
+  "departamento": "Engenharia"
+}</pre>
+          </div>
+        </div>
+      </li>
+      <li class="endpoint">
+        <h3>DELETE /servidores/deletar/:id</h3>
+        <div class="endpoint-content">
+          <p>Excluir servidor pelo ID.</p>
+          <div class="method">
+            <p>Método: <code>DELETE</code></p>
+            <p>Exemplo:</p>
+            <pre>/servidores/deletar/1</pre>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
